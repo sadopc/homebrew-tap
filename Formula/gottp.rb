@@ -7,22 +7,22 @@ class Gottp < Formula
   on_macos do
     on_intel do
       url "https://github.com/sadopc/gottp/releases/download/v0.5.0/gottp_0.5.0_darwin_amd64.tar.gz"
-      sha256 "4c83a436d9459b9dfa5549ece3014c343678612d5118b4a4444130136f635de7"
+      sha256 "c91ea96cc4582f66ef45494969960a1d90df683fbb8797caab7d5970bb92274f"
     end
     on_arm do
       url "https://github.com/sadopc/gottp/releases/download/v0.5.0/gottp_0.5.0_darwin_arm64.tar.gz"
-      sha256 "057ea2d527f0d6952e73cdd5228f252d7b04c349069d2364e052e9f026122644"
+      sha256 "49523af50acd8a8881d2cdbad57255bb6fbfba5305424610beeab5a9016c697a"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/sadopc/gottp/releases/download/v0.5.0/gottp_0.5.0_linux_amd64.tar.gz"
-      sha256 "016fbb818831c630ad9b7c22367fdc0e8b9ab76e6988e65084013fcc2575e670"
+      sha256 "166423bcfe310a8f32802d2c08b5ea8ed016190c81e5138af425bdc1e519cb25"
     end
     on_arm do
       url "https://github.com/sadopc/gottp/releases/download/v0.5.0/gottp_0.5.0_linux_arm64.tar.gz"
-      sha256 "65ead4038653b801b93d08510a795067859615544b19f37366b6c76d04c2d165"
+      sha256 "42e062eb182c1207450042e97128455c1a9e7ea9523ebb65e0eee9571d885151"
     end
   end
 
