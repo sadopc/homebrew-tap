@@ -4,21 +4,21 @@
 class Gotermsql < Formula
   desc "A terminal SQL IDE supporting PostgreSQL, MySQL, SQLite, and DuckDB"
   homepage "https://github.com/sadopc/gotermsql"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sadopc/gotermsql/releases/download/v0.2.0/gotermsql_0.2.0_darwin_amd64.tar.gz"
-      sha256 "fad18667c49303be695fd09c46f8b4735be4cb0ec2db5a2d8588ff92b5d26a71"
+      url "https://github.com/sadopc/gotermsql/releases/download/v0.3.0/gotermsql_0.3.0_darwin_amd64.tar.gz"
+      sha256 "4a0c0c0e0accd1461993870c15ca05e6ab6abc97d6087b58c8f4de2f6fede1e9"
 
       def install
         bin.install "gotermsql"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sadopc/gotermsql/releases/download/v0.2.0/gotermsql_0.2.0_darwin_arm64.tar.gz"
-      sha256 "c4f516be589dc8d6b1b380fcb64ca8351e6a5fb89b1f4b9bdfbcff333e6b342d"
+      url "https://github.com/sadopc/gotermsql/releases/download/v0.3.0/gotermsql_0.3.0_darwin_arm64.tar.gz"
+      sha256 "89ef611a5ebd69ec62a724e218321399f7f7c34334b095b05ed632cf56c812ed"
 
       def install
         bin.install "gotermsql"
@@ -28,15 +28,15 @@ class Gotermsql < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sadopc/gotermsql/releases/download/v0.2.0/gotermsql_0.2.0_linux_amd64.tar.gz"
-      sha256 "115bf1a3b7846cf21f710a5380e037c2f6f0e78d7b1029fc0fe7d405bbdc6aec"
+      url "https://github.com/sadopc/gotermsql/releases/download/v0.3.0/gotermsql_0.3.0_linux_amd64.tar.gz"
+      sha256 "2c3266774dc43aad7df152edece5b354c07134279268544ba570223bb4abcd63"
       def install
         bin.install "gotermsql"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sadopc/gotermsql/releases/download/v0.2.0/gotermsql_0.2.0_linux_arm64.tar.gz"
-      sha256 "64f47ed945966b8b9f1e51b16bcc0de0abf3c0034bb257d8057998032811285a"
+      url "https://github.com/sadopc/gotermsql/releases/download/v0.3.0/gotermsql_0.3.0_linux_arm64.tar.gz"
+      sha256 "08a68c2831caadde750fbc996259ef20e500192b0d85668ee1ac6cfd1f7d4f69"
       def install
         bin.install "gotermsql"
       end
