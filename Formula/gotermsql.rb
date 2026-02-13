@@ -10,7 +10,7 @@ class Gotermsql < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/sadopc/gotermsql/releases/download/v0.3.1/gotermsql_0.3.1_darwin_amd64.tar.gz"
-      sha256 "e1229ed2d5210a221f19d312863ce4bba39f0791f17e7ad29c55bb178b586722"
+      sha256 "dd5a34a850bc48b2c9a0bb7832aeae0068ffbf79f88bd41a1e0ca264448007ec"
 
       def install
         bin.install "gotermsql"
@@ -18,7 +18,7 @@ class Gotermsql < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/sadopc/gotermsql/releases/download/v0.3.1/gotermsql_0.3.1_darwin_arm64.tar.gz"
-      sha256 "6ef8714dffad8bdc9267e43a5de94ca970cdd2e0ffc52638c319a2d6517bc687"
+      sha256 "173f2e95564c2c0cb5c9a2578e78c9b3720b687650f2bdd98ee5f09885555a73"
 
       def install
         bin.install "gotermsql"
@@ -29,14 +29,14 @@ class Gotermsql < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/sadopc/gotermsql/releases/download/v0.3.1/gotermsql_0.3.1_linux_amd64.tar.gz"
-      sha256 "c60401035812a6df9d00170bcd263e071e859f19da2bc346d36e4ca12b9f123f"
+      sha256 "65404975d072774cfeb5e5fa20cd285ad55ee617156e88d80c5b197434f9a5c0"
       def install
         bin.install "gotermsql"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sadopc/gotermsql/releases/download/v0.3.1/gotermsql_0.3.1_linux_arm64.tar.gz"
-      sha256 "ae4350ea86916dc182b050970b62ce7b578f8e91607dbc927fe1437a03f95022"
+      sha256 "25b4c1e2cd1be589ad411bd16cad62a851b037da9fb41c4b8823d12da5ed4504"
       def install
         bin.install "gotermsql"
       end
