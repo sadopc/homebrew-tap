@@ -1,6 +1,6 @@
 cask "magnetism" do
-  version "1.0.0"
-  sha256 "a65c5e575d2e0e53fc68b2a24306c3b719d7f99bb8c5385d35a74a18ce86e175"
+  version "1.0.1"
+  sha256 "847821ab77c4b48a004f8fb4ad115efbb7b0da06f803d9039eb9168279a55282"
 
   url "https://github.com/sadopc/magnetism/releases/download/v#{version}/Magnetism-#{version}.zip"
   name "Magnetism"
