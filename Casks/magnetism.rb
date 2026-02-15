@@ -11,10 +11,10 @@ cask "magnetism" do
 
   app "Magnetism.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Magnetism.app"]
-  end
+  caveats <<~EOS
+    Magnetism is not notarized. If macOS blocks the app, reinstall with:
+      brew reinstall --cask --no-quarantine magnetism
+  EOS
 
   zap trash: [
     "~/Library/Preferences/com.magnetism.app.plist",
