@@ -11,6 +11,11 @@ cask "magnetism" do
 
   app "Magnetism.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Magnetism.app"]
+  end
+
   zap trash: [
     "~/Library/Preferences/com.magnetism.app.plist",
   ]
