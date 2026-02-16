@@ -1,6 +1,6 @@
 cask "edaboard" do
   version "0.1.0"
-  sha256 "1c2df343831ee0f6e5d641f98269d2399ae7a6991207b5a902e6da30d8dddc09"
+  sha256 "ee010ffa946c2b22f8887cf1c74863fa24ada9ba013772faa6f2c2fc9c962be1"
 
   url "https://github.com/sadopc/edaboard/releases/download/v#{version}/EdaBoard-#{version}-arm64.zip"
   name "EdaBoard"
@@ -10,7 +10,7 @@ cask "edaboard" do
   depends_on macos: ">= :tahoe"
   depends_on arch: :arm64
 
-  app "ClipVault.app"
+  app "EdaBoard.app"
 
   caveats <<~EOS
     EdaBoard is not notarized. If macOS blocks the app, reinstall with:
