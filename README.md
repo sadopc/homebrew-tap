@@ -24,7 +24,6 @@ brew install sadopc/tap/<formula>
 
 | Formula | Description |
 |---------|-------------|
-| [edaboard](https://github.com/sadopc/edaboard) | Native macOS menubar clipboard manager with instant search |
 | [godu](https://github.com/sadopc/godu) | Fast, interactive disk usage analyzer for the terminal |
 | [gotermsql](https://github.com/sadopc/gotermsql) | Terminal SQL IDE supporting PostgreSQL, MySQL, SQLite, and DuckDB |
 | [gottp](https://github.com/sadopc/gottp) | Postman/Insomnia-like TUI API client with multi-protocol support |
@@ -34,8 +33,10 @@ brew install sadopc/tap/<formula>
 
 | Cask | Description |
 |------|-------------|
+| [edaboard](https://github.com/sadopc/edaboard) | Native macOS menubar clipboard manager with instant search |
 | [magnetism](https://github.com/sadopc/magnetism) | Free, open-source window manager for macOS |
 
 ```bash
+brew install --cask sadopc/tap/edaboard
 brew install --cask sadopc/tap/magnetism
 ```
