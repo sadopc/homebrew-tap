@@ -1,33 +1,38 @@
 class Edaboard < Formula
-  desc \"Native macOS menubar clipboard manager with instant search\"
-  homepage \"https://github.com/sadopc/edaboard\"
-  url \"https://github.com/sadopc/edaboard.git\", branch: \"main\"
-  version \"0.1.0\"
-  license \"MIT\"
+  desc "Native macOS menubar clipboard manager with instant search"
+  homepage "https://github.com/sadopc/edaboard"
+  version "0.1.0"
+  license "MIT"
 
-  depends_on xcode: :build
+  depends_on macos: :tahoe
+  depends_on arch: :arm64
+
+  url "https://github.com/sadopc/edaboard/releases/download/v0.1.0/EdaBoard-0.1.0-arm64.zip"
+  sha256 "1c2df343831ee0f6e5d641f98269d2399ae7a6991207b5a902e6da30d8dddc09"
 
   def install
-    system \"xcodebuild\", \"-scheme\", \"ClipVault\", \"-configuration\", \"Release\", \"build\", \"CODE_SIGN_IDENTITY=\", \"CODE_SIGNING_REQUIRED=NO\", \"DWARF_DSYM_FOLDER_PATH=#{buildpath}\"
-    
-    app_path = buildpath.glob(\"build/Release/ClipVault.app\").first
-    raise \"ClipVault.app not found after build\" unless app_path
-    
-    prefix.install app_path
+    prefix.install "ClipVault.app"
+    bin.write_exec_script prefix/"ClipVault.app/Contents/MacOS/ClipVault"
+  end
+
+  def post_install
+    system "xattr", "-rd", "com.apple.quarantine", "#{prefix}/ClipVault.app"
   end
 
   def caveats
     <<~EOS
-      EdaBoard is not code-signed. If macOS blocks the app, reinstall with:
-        brew reinstall edaboard
-      Then allow it in System Preferences → Security & Privacy
-      
-      Or use:
-        xattr -rd com.apple.quarantine /Applications/ClipVault.app
+      EdaBoard has been installed to:
+        #{prefix}/ClipVault.app
+
+      To add to Applications:
+        ln -sf #{prefix}/ClipVault.app /Applications/ClipVault.app
+
+      EdaBoard is not notarized. If macOS blocks the app:
+        xattr -rd com.apple.quarantine #{prefix}/ClipVault.app
     EOS
   end
 
   test do
-    assert (prefix/"ClipVault.app").directory?
+    assert_predicate prefix/"ClipVault.app/Contents/MacOS/ClipVault", :executable?
   end
 end
