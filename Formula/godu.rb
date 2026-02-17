@@ -1,26 +1,26 @@
 class Godu < Formula
   desc "Fast, interactive disk usage analyzer for the terminal"
   homepage "https://github.com/sadopc/godu"
-  version "1.2.7"
+  version "1.2.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sadopc/godu/releases/download/v1.2.7/godu-darwin-arm64"
-      sha256 "8718762c237618797ce1a921e5f94aa13485e6c90d10d02a53566f02a5c4a04c"
+      url "https://github.com/sadopc/godu/releases/download/v1.2.8/godu-darwin-arm64"
+      sha256 "c967ff8c7bb616d3e62dcff7ab0952b634d161859062355d4988c6df14296208"
     else
-      url "https://github.com/sadopc/godu/releases/download/v1.2.7/godu-darwin-amd64"
-      sha256 "b19d9c6ac36c7fb2e85a9b3fa5d0fac0d4f933f924654168faa5471bcd9154dc"
+      url "https://github.com/sadopc/godu/releases/download/v1.2.8/godu-darwin-amd64"
+      sha256 "4ac7c484452ff1cd51c30bffc77f8d746e3d7e1767b9959742ea9ade18fc148b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/sadopc/godu/releases/download/v1.2.7/godu-linux-arm64"
-      sha256 "5e651e38dead7087cce4a3395c03c53a34dd195084a5a961da3c7ac9c6fe12d2"
+      url "https://github.com/sadopc/godu/releases/download/v1.2.8/godu-linux-arm64"
+      sha256 "9d456fe9fb3f5e2edd4ee8bd168455ea50a61248ee541bfadbd298170eb3474b"
     else
-      url "https://github.com/sadopc/godu/releases/download/v1.2.7/godu-linux-amd64"
-      sha256 "41a208f05d3b7c1ff3d8ce506b1c834f143b216a0258507622ebd103c20fb600"
+      url "https://github.com/sadopc/godu/releases/download/v1.2.8/godu-linux-amd64"
+      sha256 "95c806ea0ca198b96bbc83ea48189456931aa85e62084b1a805d034f1bd3ed8c"
     end
   end
 
