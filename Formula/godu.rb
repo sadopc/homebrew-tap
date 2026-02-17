@@ -7,20 +7,20 @@ class Godu < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/sadopc/godu/releases/download/v1.2.0/godu-darwin-arm64"
-      sha256 "c7bf89738c8cb6aa2df66818dbe5dea4ab6534d76497e5679074f9d69a2658cc"
+      sha256 "69d05f572e302e07ecb64782176a7d4d96199bcae8a6213575b8c7ed80a9a93c"
     else
       url "https://github.com/sadopc/godu/releases/download/v1.2.0/godu-darwin-amd64"
-      sha256 "cca930355d14d1eda6b8972dd23e667ed18b433bd92469fd752401939ab52c97"
+      sha256 "963cc92e28e9d93fd629e8c27ee6fbfa930c6972575638f8a325521f7eedb282"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/sadopc/godu/releases/download/v1.2.0/godu-linux-arm64"
-      sha256 "b1cee7fde903d449f61c6fccb808ea500dd79a69878e2af5e728a8748027eb34"
+      sha256 "6a341911bbf7de283e6c5ec87d3449a09e181b68a1b78f80f0754c05b0e1d9e4"
     else
       url "https://github.com/sadopc/godu/releases/download/v1.2.0/godu-linux-amd64"
-      sha256 "b39372cc2d0dcf5036a880af596dca8a6d2303f02f6ba53f6e5f0cd1539871bb"
+      sha256 "e0a99e85e9a87dc7000138817a416a2cdf4b1d8d3bb1c7392caa8cd7868ff7fc"
     end
   end
 
